@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link href="fonts.googleapis.com" rel="stylesheet">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Invito Battesimo</title>
 <style>
-/* Protezione totale: non selezionabile e non modificabile */
+/* Protezione totale e blocco scorrimento */
 body {
     font-family: "Playfair Display", serif;
     background: #c08081;
@@ -17,76 +17,75 @@ body {
     -webkit-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
-    overflow-x: hidden; /* Evita scorrimenti laterali fastidiosi */
+    overflow-x: hidden;
 }
 
 .container {
-    width: 92%; /* Adattamento per schermi piccoli */
+    width: 95%;
     max-width: 450px;
     margin: 20px auto;
     background: #ffffffcc;
     background-image: url("sfondo2.jpg");
-    background-size: cover; /* Corretto da 125% a cover per evitare sgranature */
+    background-size: 100% 100%; /* Forza l'immagine a coprire esattamente il rettangolo */
     background-position: center;
-    padding: 25px 15px;
+    background-repeat: no-repeat;
+    
+    /* AUMENTO PADDING: Spinge il testo dentro l'ovale centrale */
+    /* Sopra/Sotto: 80px | Destra/Sinistra: 50px */
+    padding: 80px 55px; 
+    
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(6px);
     position: relative;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Essenziale per non far esplodere il contenitore */
 }
 
-/* Ottimizzazione testi per Mobile */
 .info { 
     font-family: 'Allura', cursive; 
-    font-size: 28px; 
-    margin-top: 20px; 
-    line-height: 1.4; 
+    font-size: 26px; /* Leggermente ridotto per stare nell'ovale */
+    line-height: 1.3; 
 }
 
-/* Rimosso i margini negativi che rompevano il layout su mobile */
 .info_orario { 
     font-family: 'Allura', cursive; 
-    font-size: 28px; 
-    line-height: 1.4; 
-    margin: 10px 0;
+    font-size: 26px; 
+    margin: 5px 0;
 }
 
 .info2, .info3 { 
     font-family: 'Allura', cursive; 
-    font-size: 22px; 
-    margin: 15px 0; 
-    line-height: 1.4;
-    text-align: center; /* Centrato per leggibilità su smartphone */
+    font-size: 20px; 
+    margin: 10px 0; 
+    text-align: center;
 }
 
 .maps-link { 
     display: flex; 
     align-items: center; 
-    gap: 8px; 
+    gap: 5px; 
     justify-content: center; 
-    margin: 5px 0 20px 0; 
-    font-size: 18px;
+    margin: 2px 0 15px 0; 
+    font-size: 16px;
 }
 
-.maps-icon { width: 18px; height: auto; }
+.maps-icon { width: 14px; height: auto; }
 
 .btn-whatsapp { 
     display: inline-block; 
-    margin-top: 20px; 
+    margin-top: 15px; 
     background-color: #25d366; 
     color: white; 
-    padding: 12px 25px; 
+    padding: 10px 20px; 
     border-radius: 40px; 
     text-decoration: none; 
-    font-size: 18px; 
+    font-size: 17px; 
     font-weight: bold; 
     -webkit-tap-highlight-color: transparent;
 }
 
-.footer-note { margin-top: 20px; color: #888; font-size: 14px; }
+.footer-note { margin-top: 15px; color: #888; font-size: 12px; }
 
-/* Rende i link Maps non sottolineati */
 a { text-decoration: none; color: inherit; }
 
 </style>
@@ -103,13 +102,13 @@ a { text-decoration: none; color: inherit; }
 
         <p class="info2">
             <strong>Location:</strong><br>
-            Chiesa Madre del Sacro Cuore di Gesù,<br>
-            Via Torino, 25 - Bellizzi (SA)
+            Chiesa Madre del Sacro Cuore,<br>
+            Bellizzi (SA)
         </p>
 
         <span class="maps-link">
             <img class="maps-icon" src="images.png" alt="Maps"> 
-            <a href="www.google.com" target="_blank">Apri su Google Maps</a>
+            <a href="www.google.com" target="_blank">Apri Maps</a>
         </span>
 
         <div class="info_orario">
@@ -122,12 +121,12 @@ a { text-decoration: none; color: inherit; }
 
         <span class="maps-link">
             <img class="maps-icon" src="images.png" alt="Maps"> 
-            <a href="www.google.com" target="_blank">Apri su Google Maps</a>
+            <a href="www.google.com" target="_blank">Apri Maps</a>
         </span>
     </div>
 
-    <a class="btn-whatsapp" href="https://wa.me/393472706048?text=Ciao!%20Confermo%20la%20mia%20presenza%20al%20battesimo." target="_blank">
-        Conferma su WhatsApp
+    <a class="btn-whatsapp" href="wa.me." target="_blank">
+        Conferma
     </a>
 
     <p class="footer-note">Ti aspettiamo!</p>
