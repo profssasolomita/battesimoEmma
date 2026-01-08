@@ -3,65 +3,66 @@
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Invito Battesimo</title>
 <style>
+/* Blocca la selezione e le interazioni di modifica */
 body {
-font-family: "Playfair Display", serif;
-background: #c08081; /* Rosa antico */
-margin: 0;
-padding: 0;
-text-align: center;
-color: #555;
+    font-family: "Playfair Display", serif;
+    background: #c08081; /* Rosa antico */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #555;
+    /* Impedisce la selezione del testo */
+    -webkit-user-select: none;
+    user-select: none;
+    /* Impedisce il menu contestuale (tasto destro/pressione prolungata) */
+    -webkit-touch-callout: none;
 }
 
 .container {
-max-width: 480px;
-margin: 50px auto;
-background: #ffffffcc;
-
-padding: 35px;
-border-radius: 25px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-backdrop-filter: blur(6px);
-position: relative;
-overflow: hidden;
+    width: 90%; /* Adattabile su smartphone */
+    max-width: 480px;
+    margin: 30px auto;
+    background: #ffffffcc;
+    padding: 20px; /* Ridotto per mobile */
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.teddy {
-width: 140px;
-margin-bottom: 10px;
-opacity: 0.95;
-}
-
+/* Immagine adattiva che non sballa il layout */
 .decor-divider {
-width: 500px;
-margin:-10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none; /* Impedisce il trascinamento dell'immagine */
 }
 
-.title-elegant { font-family: 'Allura', cursive; font-size: 48px; color: #EA899A; margin: 5px 0 15px 0; position: relative; display: inline-block; }
-.star { display: inline-block; width: 18px; height: 18px; background: #EA899A; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); margin-left: 6px; vertical-align: middle; }
+/* Classi per testi (già presenti nel tuo codice) */
+.title-elegant { font-family: 'Allura', cursive; font-size: 38px; color: #EA899A; margin: 5px 0; }
+.info { font-family: 'Allura', cursive; font-size: 26px; line-height: 1.5;}
 
-.info { font-family: 'Allura', cursive; font-size: 30px; margin-top: 15px; line-height: 1.7;}
-.info2 { font-family: 'Allura', cursive; font-size: 22px; margin-top: 15px; line-height: 1.7;}
-.maps-link { display: flex; align-items: center; gap: 6px; justify-content: center; margin: 5px 0 15px 0; }
-.maps-icon { width: 16px; height: 21px; }
-
-.btn-whatsapp { display: inline-block; margin-top: 30px; background-color: #25d366; color: white; padding: 15px 28px; border-radius: 40px; text-decoration: none; font-size: 19px; font-weight: bold; transition: 0.2s; }
-.btn-whatsapp:hover { background-color: #1da851; }
-.footer-note { margin-top: 25px; color: #888; font-size: 14px; }
+/* Link senza sottolineatura */
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* Rimuove il flash blu al tocco */
+}
 
 </style>
 </head>
-<body>
-	<a href="speriamo.html">
-<div class="container">
+<body oncontextmenu="return false;"> <!-- Disabilita il tasto destro -->
 
+    <a href="speriamo.html">
+        <div class="container">
+            <!-- L'immagine ora si adatta alla larghezza del contenitore -->
+            <img class="decor-divider" src="sfondo.png" alt="Decorazione Invito" />
+        </div>
+    </a>
 
-<img class="decor-divider" src="sfondo.png" />
-
-
-</div>
-</a>
 </body>
 </html>
