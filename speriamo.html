@@ -12,26 +12,24 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #555;
+    color: #8e595a; /* Rosa antico scuro */
     -webkit-user-select: none;
     user-select: none;
     overflow-x: hidden;
 }
 
-/* Scritta in alto fuori dall'ovale */
 .header-note { 
     margin: 20px 0 10px 0; 
     color: white; 
     font-family: 'Allura', cursive; 
-    font-size: 35px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    font-size: 32px;
 }
 
 .container-link {
     text-decoration: none;
     display: inline-block;
     width: 95%;
-    max-width: 450px;
+    max-width: 420px;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -41,46 +39,42 @@ body {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 30px 45px; /* Padding ridotto sopra */
+    padding: 20px 40px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(6px);
     box-sizing: border-box;
-    min-height: 550px;
+    min-height: 520px;
 }
 
 .info { 
     font-family: 'Allura', cursive; 
-    font-size: 28px; 
-    line-height: 1.3; 
+    font-size: 24px; /* Ridotto */
+    line-height: 1.2; 
+    color: #8e595a;
 }
 
-/* SPOSTA TESTO PIÙ SOPRA NELL'OVALE */
-.data-sezione {
-    margin-top: 50px; /* Ridotto per alzare tutto il blocco */
-    font-weight: bold;
+.posizionamento-ovale {
+    margin-top: 50px; /* Posizione sincronizzata */
 }
 
-.info2 { font-size: 22px; margin: 10px 0; }
+.info2 { font-size: 20px; margin: 8px 0; }
 
 .maps-link { 
     display: flex; 
     align-items: center; 
     gap: 5px; 
     justify-content: center; 
-    font-size: 16px;
-    color: #EA899A;
+    font-size: 15px;
+    color: #8e595a;
+    text-decoration: underline;
 }
 
-.maps-icon { width: 14px; height: auto; }
-
-/* Scritta in basso fuori dall'ovale */
 .click-hint {
     font-family: 'Allura', cursive;
-    font-size: 24px;
+    font-size: 26px;
     color: white;
-    margin-top: 15px;
-    opacity: 0.9;
+    margin-top: 10px;
 }
 </style>
 </head>
@@ -91,24 +85,22 @@ body {
     <a href="festeggia.html" class="container-link">
         <div class="container">
             <div class="info">
-                <div class="data-sezione">
-                    <strong>Data:</strong> 1 Marzo 2026
-                </div>
-                <div class="info_orario"><strong>Ore:</strong> 11:00</div>
-                <p class="info2">
-                    <strong>Location:</strong><br>
-                    Chiesa Madre del Sacro Cuore,<br>
-                    Bellizzi (SA)
-                </p>
-                <div class="maps-link">
-                    <img class="maps-icon" src="images.png" alt="Maps"> 
-                    <span>Apri Maps</span>
+                <div class="posizionamento-ovale">
+                    <strong>Data:</strong> 1 Marzo 2026<br>
+                    <strong>Ore:</strong> 11:00
+                    <p class="info2">
+                        <strong>Location:</strong><br>
+                        Chiesa Madre del Sacro Cuore,<br>
+                        Bellizzi (SA)
+                    </p>
+                    <div class="maps-link">
+                        <span>Apri Maps</span>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="click-hint">Clicca per festeggiare</div>
     </a>
-
-    <div class="click-hint">Clicca per festeggiare</div>
 
 </body>
 </html>
