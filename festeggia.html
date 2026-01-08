@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<link href="fonts.googleapis.com" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Dettagli Ricevimento</title>
+<style>
+body {
+    font-family: "Playfair Display", serif;
+    background: #c08081;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #555;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 95%;
+    max-width: 450px;
+    margin: 30px auto;
+    background: #ffffffcc;
+    background-image: url("sfondo2.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 45px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+    min-height: 550px;
+}
+
+.info { 
+    font-family: 'Allura', cursive; 
+    font-size: 28px; 
+    line-height: 1.4; 
+    color: #555;
+}
+
+/* SPOSTAMENTO A SINISTRA (come richiesto) */
+.sezione-ristorante {
+    margin-left: -40px; 
+    margin-top: 100px; /* Posizionamento nell'ovale */
+}
+
+.info_orario { 
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info3 { 
+    font-size: 24px; 
+    margin: 5px 0; 
+}
+
+.maps-link { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    justify-content: center; 
+    margin: 10px 0 30px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: #EA899A;
+}
+
+.maps-icon { width: 18px; height: auto; }
+
+/* TASTO WHATSAPP */
+.btn-whatsapp { 
+    display: inline-block; 
+    margin-top: 20px; 
+    background-color: #25d366; 
+    color: white; 
+    padding: 15px 30px; 
+    border-radius: 40px; 
+    text-decoration: none; 
+    font-size: 19px; 
+    font-weight: bold; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-whatsapp:active { transform: scale(0.98); }
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+</style>
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="container">
+        <div class="info">
+            
+            <!-- Sezione Ristorante spostata a sinistra nell'ovale -->
+            <div class="sezione-ristorante">
+                <div class="info_orario">
+                    <strong>Ore:</strong> 13:00
+                </div>
+
+                <p class="info3">
+                    <strong>Ristorante:</strong><br>
+                    Naturale<br>
+                    <small style="font-size: 16px;">Via Antica, 18 - Bellizzi (SA)</small>
+                </p>
+
+                <a href="www.google.com" target="_blank" class="maps-link">
+                    <img class="maps-icon" src="images.png" alt="Maps"> 
+                    <span>Apri su Google Maps</span>
+                </a>
+            </div>
+
+            <!-- Pulsante Conferma -->
+            <a class="btn-whatsapp" href="wa.me." target="_blank">
+                Conferma su WhatsApp
+            </a>
+
+            <a href="javascript:history.back()" class="back-link">← Torna all'invito</a>
+
+        </div>
+    </div>
+
+</body>
+</html>
