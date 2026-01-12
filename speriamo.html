@@ -1,154 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<!-- Link font corretto per il 2026 -->
-<link href="fonts.googleapis.com" rel="stylesheet">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Invito Battesimo</title>
-<style>
-body {
-    font-family: "Playfair Display", serif;
-    background: #c08081; /* Rosa antico */
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #555;
-    /* Impedisce la selezione del testo */
-    -webkit-user-select: none;
-    user-select: none;
-    /* Impedisce il menu contestuale (tasto destro/pressione prolungata) */
-    -webkit-touch-callout: none;
-}
-
-.container {
-    width: 90%; /* Adattabile su smartphone */
-    max-width: 480px;
-    margin: 30px auto;
-    background: #ffffffcc;
-    padding: 20px; /* Ridotto per mobile */
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(6px);
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-/* Immagine adattiva che non sballa il layout */
-.decor-divider {
-    width: 100%;
-    height: auto;
-    display: block;
-    pointer-events: none; /* Impedisce il trascinamento dell'immagine */
-}
-.back-link {
-    display: block;
-    margin-top: 20px;
-    color: white;
-    font-family: 'Allura', cursive;
-    font-size: 24px;
-    text-decoration: none;
-}
-/* Classi per testi (già presenti nel tuo codice) */
-.title-elegant { font-family: 'Allura', cursive; font-size: 38px; color: #EA899A; margin: 5px 0; }
-.info { font-family: 'Allura', cursive; font-size: 26px; line-height: 1.5;}
-
-/* Link senza sottolineatura */
-a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent; /* Rimuove il flash blu al tocco */
-}
-
-.header-note { 
-    margin: 20px 0 10px 0; 
-    color: white; 
-    font-family: 'Allura', cursive; 
-    font-size: 32px;
-}
-
-/* Rende lo sfondo cliccabile per andare alla seconda pagina */
-.bg-click-layer {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 1;
-}
-
-.info { 
-    font-family: 'Allura', cursive; 
-    font-size: 24px; 
-    line-height: 1.2; 
-    color: #8e595a;
-    position: relative;
-    z-index: 2; /* Sopra lo sfondo cliccabile */
-    /*pointer-events: none;  Rende il testo NON cliccabile */
-}
-
-.posizionamento-ovale {
-    margin-top: 65px;
-}
-
-.info2 { font-size: 20px; margin: 8px 0; }
-
-/* SPOSTAMENTO "APRI MAPS" A SINISTRA */
-.maps-container {
-    margin-top: 10px;
-    text-align: center;
-    width: 100%;
-}
-
-.maps-link-wrapper {
-    display: inline-block;
-    margin-right: 80px; /* Sposta il link a sinistra di almeno 40px rispetto al centro */
-    pointer-events: auto; /* Riattiva il click solo su questo link */
-}
-
-.maps-link-wrapper a {
-    font-size: 17px;
-    color: #8e595a;
-    text-decoration: underline;
-    font-family: 'Allura', cursive;
-}
-
-.click-hint {
-    font-family: 'Allura', cursive;
-    font-size: 26px;
-    color: white;
-    margin-top: 10px;
-    text-decoration: none;
-    display: block;
-    -webkit-tap-highlight-color: transparent;
-}
-</style>
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Dettagli Chiesa</title>
+    <style>
+        body { font-family: 'Allura', cursive; background: #c08081; margin: 0; padding: 0; text-align: center; color: #8e595a; -webkit-user-select: none; user-select: none; }
+        .container {
+            width: 90%; max-width: 480px; margin: 30px auto;
+            background: #ffffffcc url("sfondovuoto.png") no-repeat center;
+            background-size: 100% 100%; padding: 20px;
+            border-radius: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            min-height: 520px; box-sizing: border-box; position: relative;
+        }
+        /* DIV DOVE PUOI SCRIVERE */
+        .testo-ovale {
+            margin-top: 65px; /* Aligner con l'ovale dell'immagine */
+            font-size: 24px;
+            line-height: 1.3;
+        }
+        .btn-next { color: white; font-size: 26px; text-decoration: none; display: block; margin-top: 10px; }
+    </style>
 </head>
 <body oncontextmenu="return false;">
-
-    <div class="header-note">Ti aspettiamo!</div>
-
     <div class="container">
-        <!-- Questo layer rende l'immagine cliccabile per festeggia.html -->
-        <a href="festeggia.html" class="bg-click-layer"></a>
-    <img class="decor-divider" src="sfondovuoto.png" alt="Decorazione Invito" />
-        <div class="info">
-            <div class="posizionamento-ovale">
-                <strong>Data:</strong> 1 Marzo 2026<br>
-                <strong>Ore:</strong> 11:00
-                <p class="info2">
-                    <strong>Location:</strong><br>
-                    Chiesa Madre del Sacro Cuore<br>
-                     <small style="font-size: 14px;">Via Torino, 25 - Bellizzi (SA)</small>
-                </p>
-                
-                
-             <a href="https://www.google.com/maps/dir//Via+Torino,+25,+84092+Bellizzi+SA/@40.6107171,14.9716992,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x133be0a89a5d496f:0xe9678c2f41876d23!2m2!1d14.9499616!2d40.6206116?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D">Apri Maps</a>
-          
-            </div>
+        <div class="testo-ovale">
+            <!-- SCRIVI QUI SOTTO -->
+            <strong>Data:</strong> 1 Marzo 2026<br>
+            <strong>Ore:</strong> 11:00<br>
+            <p>Chiesa Madre del Sacro Cuore</p>
+            <!-- FINE SCRITTURA -->
+		  <a href="https://www.google.com/maps/dir//Via+Antica,+18,+84092+Bellizzi+SA/@40.6107171,14.9716992,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x133bde1ec127a891:0xa3664b4e406ba460!2m2!1d14.9601524!2d40.6279861?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Apri su Maps</a><br>
+		  
         </div>
     </div>
-
-    <a href="festeggia.html" style="text-decoration: none;">
-        <div class="click-hint">Clicca per festeggiare</div>
-    </a>
-
+    <a href="festeggia.html" class="btn-next">Clicca per i dettagli del ristorante</a>
 </body>
 </html>
