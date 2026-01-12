@@ -9,14 +9,55 @@
 <style>
 body {
     font-family: "Playfair Display", serif;
-    background: #c08081;
+    background: #c08081; /* Rosa antico */
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #8e595a; /* Rosa antico scuro */
+    color: #555;
+    /* Impedisce la selezione del testo */
     -webkit-user-select: none;
     user-select: none;
-    overflow-x: hidden;
+    /* Impedisce il menu contestuale (tasto destro/pressione prolungata) */
+    -webkit-touch-callout: none;
+}
+
+.container {
+    width: 90%; /* Adattabile su smartphone */
+    max-width: 480px;
+    margin: 30px auto;
+    background: #ffffffcc;
+    padding: 20px; /* Ridotto per mobile */
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Immagine adattiva che non sballa il layout */
+.decor-divider {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none; /* Impedisce il trascinamento dell'immagine */
+}
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Allura', cursive;
+    font-size: 24px;
+    text-decoration: none;
+}
+/* Classi per testi (già presenti nel tuo codice) */
+.title-elegant { font-family: 'Allura', cursive; font-size: 38px; color: #EA899A; margin: 5px 0; }
+.info { font-family: 'Allura', cursive; font-size: 26px; line-height: 1.5;}
+
+/* Link senza sottolineatura */
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* Rimuove il flash blu al tocco */
 }
 
 .header-note { 
@@ -24,25 +65,6 @@ body {
     color: white; 
     font-family: 'Allura', cursive; 
     font-size: 32px;
-}
-
-.container {
-    display: inline-block;
-    width: 95%;
-    max-width: 420px;
-    background: #ffffffcc;
-    background-image: url("sfondovuoto.png");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(6px);
-    box-sizing: border-box;
-    min-height: 520px;
-    position: relative;
-    text-decoration: none;
 }
 
 /* Rende lo sfondo cliccabile per andare alla seconda pagina */
